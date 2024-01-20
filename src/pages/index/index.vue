@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { useUn } from '@uni-helper/uni-network/composables';
-const { data } = useUn();
+const { data } = useUn('http://jsonplaceholder.typicode.com/posts', { method: 'get' });
+
 </script>
 
 <template>
-  <view>测试</view>>
+  <view>{{ data }}</view>
 </template>
 
 <style  scoped></style>
